@@ -831,6 +831,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: 0.4s;
 }
 
+#more-features .blog-img img {
+  max-width: 100%;
+  float: left;
+  position: relative;
+  left: 70px;
+  bottom: auto;
+  top: 180px;
+  width: 300px;
+  height: 400px;
+  border-radius: 50%;
+}
+
 #more-features .icon {
   float: left;
 }

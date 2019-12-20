@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Alex Kisil</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+<!-- Favicons -->
+<link href="img/castor.png" rel="icon">
+<link href="img/castor.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!--<h1><a href="#intro" class="scrollto">Alex Kisil</a></h1>-->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="img/logo.png" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html#intro">Home</a></li>
+          <li class="menu-active"><a href="index.html#about">Projects</a>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="research.html">Research</a></li>
+					<li><a href="Alex_Kisil_resume.pdf">Resume</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+
+    <!--==========================
+      Projects Section
+    ============================-->
+
+
+    <section id="about" class="cta-btn-container text-center">
+      <div class="container-fluid">
+        <div class="section-header">
+            <h3 class="section-title-experience">Alex Kisil's Blog</h3>
+          <span class="section-divider"></span>
+        </div>
+      </div>
+
+    </section>
+  <!--==========================
+      Product Advanced Featuress Section
+    ============================-->
+    <section id="advanced-features">
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right wow fadeInRight" src="img/dreamwillow_cover_15.png" alt="">
+              <div class="wow fadeInLeft">
+                <h2>Companions in DREAMWILLOW</h2>
+                <h3>Dec 18, 2019</h3>
+                <p>This post is about the role of companions in the recent WolverineSoft Studio release, <a href="dreamwillow.html">DREAMWILLOW</a>.
+                  <br></br>
+                  When trying to come up with a new game idea, a common suggestion is to think of a game that already exists, and 
+                  add a twist to it. This allows you to spend less time reinventing tried-and-true mechanics from scratch and more
+                  time on curating an experience around a small -- but polished -- new idea. This is the exact philosophy that led to 
+                  DREAMWILLOW's creation. It's your typical 2D top-down twin-stick shooter with a single twist:
+                  as a necromancer, you have the ability to raise foes from the dead to fight along side you once you've bested them in combat.
+                  <br></br>
+                  There are a lot of reasons that I could say the decision to add AI companions to the game was a naive one. Frankly, getting AI allies right
+                  is something that even AAA studios struggle with all the time. But I'd like to focus in on
+                  two major issues that we ran into during the development process -- one we were able to solve, and one we were not.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-left wow fadeInLeft" src="GIFs/battle.gif" alt="">
+              <div class="wow fadeInRight">
+                <h2>Maintaining the Player's Combative Agency</h2>
+                <p>Combat in DREAMWILLOW was never meant to make the player feel incredibly powerful like what you might find in the likes of the original God of War 
+                  games, but from the get-go we knew the main character should be reasonably strong. One of our core pillars was the feeling of "willfully throwing yourself
+                  into chaos to achieve some goal." Our thinking was that the main character wouldn't throw themselves into a forest full of enemies if they didn't think they
+                  could make it to the end. However, our first iteration of companions had them spawning and...immediately clearing out the floor of enemies before the player
+                  could even do anything. Did it technically make our main character strong? Sure. Did it FEEL like our main character was strong? Of course not. The goal quickly
+                  became to kill one or two enemies and let your companions take care of the rest. To the player, companions felt condescending and disproportionately strong compared
+                  to their master.
+                <br></br>
+                Okay, yes, one of the biggest problems with companions was that we hadn't implemented iframes on enemies yet, so all of their attacks were one-shotting whatever they touched
+                due to doing ~30 attacks worth of damage per second. That was an easy fix. But even then, having companions hunt down enemies with razor sharp efficiency posed a serious
+                question to the design team: how do you keep your companions from taking away the player's combative agency without making the AI feel clunky or annoying? On one hand, it
+                was nice that your allies would always physically get out of your way when you got near an enemy. But it isn't fun when every enemy you find is already a pile of bones. Keep the companions
+                closer to the player and you feel more in control, but now your companions act as an impenetrable wall between you and your foes. Make companions weaker and they feel unnecessary to gameplay.
+                So what did we do?
+                <br></br>
+                <img class="advanced-feature-img-right wow fadeInRight" src="GIFs/maneuver.gif" alt="">
+                Well, several things. We liked the feeling of the companions following closely behind you, so we kept their range short. We liked their power level because it gave the player incentive to use our
+                one "twist" mechanic. But we didn't like how they seemed to take over every fight, so to make them seem like less of the stars of combat, we took away their hurtboxes. Instead of being able to die on their own,
+                companions would now be "sacrificed" when the player ran out of health. This inadvertently solved another problem that we were having: in a game where projectiles were constantly flying around 
+                the screen, it felt unfair when companions went off and died on thier own because they weren't intelligent enough to avoid an enemy's attack.
+                <br></br>
+                With these changes in place, we had gotten companions to a point where they felt like powerful additions to the player's arsenal, but it was still the PLAYER's arsenal. You were 
+                the star of combat, you just had loyal half-dead allies fighting alongside you and giving up their newly-leased lives for the sake of their master. I consider this a pretty elegant solution
+                for some inexperienced college-level game designers to come up with, and I'm still pretty proud of it. 
+                <br></br>
+                Now for the problem we couldn't solve.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right wow fadeInRight" src="img/shopkeep_pose.png" alt="">
+              <div class="wow fadeInLeft">
+                <h2>DREAMWILLOW's Positive Feedback Loop</h2>
+                <p>
+                 <a href=https://www.youtube.com/watch?v=H4kbJObhcHw >Game Maker's Toolkit did a fantastic video on feedback loops in video games</a>, but in short, a feedback loop is when the success or failure 
+                 of the player impacts their likelihood of future successes and failures. A core challenge of making almost any game lies in striking the balance between punishing the player for their failures without
+                 discouraging them and rewarding them for their success without taking away from the challenge of the game. Generally, games will increase the difficulty as you progress, all while equipping you to handle
+                 new challenges with rewards from past success. A basic example of this is a leveling system in JRPGs, where late-game enemies are immensely stronger than those early on, but so is the player due to all of the experience
+                 points they've gained up until that point. 
+                 <br></br>
+                  DREAMWILLOW doesn't have levels or experience points, but there is a shop after every floor that allows you to buy a health potion, max health upgrade, secondary attack upgrade, and most important of all:
+                  another mask. Masks are the in-game items that allow you to resurrect companions, and you lose them if the companion gets sacrificed. On the surface, this seems like a fair punishment for playing poorly.
+                  You get hit by too many enemy attacks and run out of health? You lose a companion and therefore one of the masks that you saved up for.
+                  <br></br>
+                  <img class="advanced-feature-img-left wow fadeInLeft" src="GIFs/companion_sacrifice.gif" alt="">
+                  Of course, this can be a damning punishment. If you start off with two masks, and have an early death while you're still learning the ropes, you're instantly starting off the game at a massive disadvantage. You're bad at the game, and now one of your biggest
+                  resources has just been ripped away from you. While it's possible to make it through a level with just one companion, the odds you'll be able to defeat enough enemies to save up for a mask in the shop is now quite low. At this
+                  point, you likely don't feel encouraged to get better at the game, but overwhelmed and frustrated by how difficult it seems to even just get back on track.
+                  <br></br>
+                  Conversely, consider the case where the player has made it to the third level without running out of health. They're on a roll. They're also at 4 companions with half the game to go. The amount of lives they can afford
+                  to lose has been increasing this whole time despite them showing that they really don't need the help. At this point, the game has essentially become trivial. Levels can be beaten by just sprinting through them and ignoring the 
+                  enemies because the player doesn't need the money to buy upgrades anymore. Any damage they take is nullified by the whopping 4 extra lives they have.
+                  <br></br>
+                  So the system is clearly broken. You get punished way too hard for being bad, and the game only gets easier as you do better. The game has a terrible snowball problem, and you only wouldn't notice it if you were a 
+                  perfectly average player. What did we do to solve it?
+                  <br></br>
+                  <img class="advanced-feature-img-right wow fadeInRight" src="GIFs/the_end.gif" alt="">
+                  We made the enemy encounters more difficult in the later levels, decreased the amount of companions you started with, and made other resources more accessible, like adding health potion drops in outside the shop. Unfortunately, none 
+                  of these approaches really solved one of the feedback loops without worsening the other. Now that the game is finished and I've had a few weeks to reflect, I've come to learn that we weren't really aiming to solve the root of the problem
+                  but rather placing a mound of band-aids over it. Rather than turning existing knobs in the game, I would've loved to see us implement new systems to counteract or work with the companions. Perhaps companions could be purchased
+                  using a different currency tied to how much damage you've taken, or how many close calls you've had. Or maybe the game should <a href=https://www.youtube.com/watch?v=7L8vAGGitr8 >implicitly try to protect the player from themselves</a> by 
+                  subtley making companions weaker in numbers or when you're at full health. I still can't say I'm sure of what the solution is, and we didn't exactly have an abundance of time for new systems by the end -- but I do think it's something we 
+                  (particularly myself, as the lead designer on the companions system) should have prioritized more. Still, it's a great lesson in design that I'm excited to apply to future projects.
+                  <br></br>
+                  If you've read this far, thanks so much! I hope you enjoyed it. You can check out DREAMWILLOW <a href="dreamwillow.html">here</a>; the project is really special to me and I'm super proud of it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #advanced-features -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row wow fadeInUp">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>Alex Kisil</h3>
+              <p>Feel free to contact me at any time! Email is the best way to get in touch with me quickly.</p>
+              <div class="social-links">
+                <a href="https://twitter.com/AlexKisil" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/alex.kisil" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/alexkisil/" class="instagram"><i class="fa fa-instagram"></i></a>
+								<a href="https://www.linkedin.com/in/alexander-kisil/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+								<a href="https://gitlab.eecs.umich.edu/akisil" class="github"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="ion-ios-location-outline"></i>
+                <p>Ann Arbor, MI 48104</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-email-outline"></i>
+                <p>akisil@umich.edu</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-telephone-outline"></i>
+                <p>+1 (586) 321-6151</p>
+              </div>
+
+            </div>
+          </div>
+					<div class="col-lg-5 col-md-8">
+						<img src="img/jimmy.jpg" width="250" height="320" alt="Jimmy" align="left">
+						<p class="description-jimmy" align=left>This is Jimmy. Jimmy loves you.</p>
+					</div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Alex Kisil</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed using <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
