@@ -43,12 +43,12 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html#intro">Home</a></li>
-          <li class="menu-active"><a href="index.html#about">Projects</a>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="research.html">Research</a></li>
-					<li><a href="Alex_Kisil_resume.pdf">Resume</a></li>
-          <li><a href="#contact">Contact Me</a></li>
+            <li class="menu-active"><a href="index.html#intro">Home</a></li>
+            <li class="menu-active"><a href="index.html#about">Projects</a>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="Alex_Kisil_resume.pdf">Resume</a></li>
+            <li><a href="#contact">Contact Me</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -63,7 +63,7 @@
     <section id="about" class="cta-btn-container text-center">
       <div class="container-fluid">
         <div class="section-header">
-          <img class="section-title-experience" src="img/dreamwillow_title_30.png" alt="">
+          <h3 class="section-title-experience">Infectant Postmortem</h3>
           <span class="section-divider"></span>
         </div>
       </div>
@@ -78,33 +78,13 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <a href="https://wolverinesoft-studio.itch.io/dreamwillow"><img class="advanced-feature-img-right wow fadeInRight" src="img/dreamwillow_cover_15.png" alt=""></a>
               <div class="wow fadeInLeft">
-                <h2>About</h2>
-                <p>DREAMWILLOW is a top-down 2D twin-stick shooter made by the University of Michigan's video game development club, where you resurrect your felled foes to fight alongside you in a dreamlike forest.</p>
-                <b>Development Info</b>
-                <ul>
-                  <li>Developed by WolverineSoft Studio</li>
-                  <li>3 month development cycle (09/08/2019 - 12/08/2019)</li>
-                  <li>30 developers</li>
-                  <li>Unity Engine</li>
-                  <li>PC, Mac target platforms</li>
-                </ul>
-                <p></p>
-                <b>My Responsibilities</b>
-                <em>(Lead Designer, Lead Programmer)</em>
-                <ul>
-                  <li>Led enemy and companion design pods</li>
-                  <li>Designed and balanced enemy/companion systems</li>
-                  <li>Designed and balanced levels</li>
-                  <li>Designed other necessary game systems
-                    <ul>
-                      <li>Character movement controller</li>
-                      <li>Interactable system</li>
-                    </ul>
-                  </li>
-                  <li>Held meetings with designers, artists, programmers, and audio engineers</li>
-                </ul>
+                <h2>The Proof is in the Inflammation</h2>
+                <p>As the club winded down for summer vacation, some passionate members of WolverineSoft decided to see 
+                  if it was possible to create a finished, compelling game over the course of 9 weeks with relatively little 
+                  experience. Here, I reflect on what went right, what could've gone better, and what I think were the most valuable 
+                  lessons learned throughout the process.</p>
+                <p>Before reading the postmortem, you can check out general information about the game and my responsibilities on it <a href="infectant.html">here</a>.</p>
               </div>
             </div>
           </div>
@@ -115,15 +95,15 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <img class="advanced-feature-img-left wow fadeInLeft" src="GIFs/gather_souls.gif" alt="">
+              <img class="advanced-feature-img-left wow fadeInLeft" src="GIFs/combat.gif" alt="">
               <div class="wow fadeInRight">
-                <h2>What I'm Proud of</h2>
+                <h2>What Went Right</h2>
                 <ul>
-                  <li>Establishing a throughline aesthetic allowed for consistent enemy designs amongst different artists</li>
-                  <li>Set up a baseline set of enemy behaviors early on, giving pod members a lot to work with right away</li>
-                  <li>All pod members' (not just designers) ideas were heard and discussed in designer brainstorming sessions</li>
+                  <li>The simplicity of the player controls let us focus on making the game feel good rather than adding complex progression systems</li>
                   <li>Actively updated public tasks/schedule allowed for transparency of who was working on what and how we were doing as a team</li>
-                  <li>Events-based style of programming enabled abstract interfaces between code, audio, and animation</li>
+                  <li>First time many members got to experience working in multi-disciplinary teams</li>
+                  <li>The game was completed -- a first for many members of the team</li>
+                  <li>Awesome art previews were frequently posted for the team to see, boosting the team's morale</li>
                 </ul>
               </div>
             </div>
@@ -135,19 +115,15 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <img class="advanced-feature-img-right wow fadeInRight" src="GIFs/companion_sacrifice.gif" alt="">
+              <img class="advanced-feature-img-right wow fadeInRight" src="GIFs/projectiles.gif" alt="">
               <div class="wow fadeInLeft">
-                <h2>What I Could've Done Better</h2>
+                <h2>What Could've Gone Better</h2>
                 <ul>
-                  <li>Took too long to establish my pods' workflow pipelines</li>
-                  <li>Initial wishy-washy critique on art and audio just led to further complications and lost work down the line</li>
-                  <li>Wasn't proactive enough in checking in on pod members' work or potential problems</li>
-                  <li>Didn't enforce a content-lock on enemies until very late in development, causing for lost work</li>
-                  <li>Enemy/companion balancing didn't happen until very late in development</li>
-                  <li>Companion system caused terrible feedback loop</li>
-                  <li>Animation became a big, unforeseen bottleneck, leading to lower througput of finished enemies</li>
-                  <li>Didn't dedicate enough time to code reviews, leading to some unmanagable scripts</li>
-                  <li>Unclear version control protocol led to git conflicts on enemy prefabs</li>
+                  <li>The development cycle taking place in the summer meant many team members were working remotely and couldn't meet</li>
+                  <li>Communication from leaders broke down near the end of development, meaning tasks were no longer being completed or reviewed</li>
+                  <li>Never enforced a content-lock, causing the finished product to have many bugs that went unnoticed during development</li>
+                  <li>A lack of understanding between teams and led to mismatched interfaces and lost work</li>
+                  <li>Very little time for pre-production made it difficult to hit the ground running</li>
                 </ul>
               </div>
             </div>
@@ -159,18 +135,25 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <img class="advanced-feature-img-left wow fadeInLeft" src="GIFs/the_end.gif" alt="">
-              <div class="wow fadeInRight">
-                <h2>Lessons I Learned</h2>
+              <img class="advanced-feature-img-right wow fadeInRight" src="GIFs/pillars.gif" alt="">
+              <div class="wow fadeInLeft">
+                <h2>Lessons Learned and Final Thoughts</h2>
+                <p>Infectant essentially served as a test-run for WolverineSoft's new studio component at the University of Michigan. The game was made by a group of 
+                  passionate students and graduates that didn't necessarily have any experience, but wanted to make a game. Because of this, we faced a lot of new challenges
+                  and grew together as a team. Unfortunately, Infectant is a game that is probably weaker than the sum of its parts, but the lessons I learned while working on the
+                  on the project have proven to be invaluable. Most importantly, I met some incredibly talented people that I continue to have the pleasure of making games with today.
+                </p>
+                <p>Some of the lessons we learned from Infectant:
+                </p>
                 <ul>
-                  <li>Always be proactive about reaching out to teammates on potential blockers</li>
-                  <li>Trust in teammates to handle straight-forward critique early on to avoid lost work later on</li>
-                  <li>Playtest more often with people outside the studio</li>
-                  <li>Balancing is best done as an on-going process, not a last-minute task</li>
-                  <li>A lot of ideas can be cool, but not all ideas add actual value or player choice to gameplay</li>
-                  <li>More enemies doesn't mean more depth if they don't change how the player has to play</li>
-                  <li>Identify bottlenecks early on so we can allocate more resources or descope when necessary</li>
+                  <li>Incremental progress and frequent check-ins should be encouraged</li>
+                  <li>System documentation is just as important as the code (if not more important!)</li>
+                  <li>Content locks are important to leave time for debugging existing features</li>
+                  <li>Playtesting should be prioritized to avoid pursuing features that aren't resonating with the players</li>
+                  <li>Frequent discussion between teams can lead to a quicker, cleaner workflow</li>
+                  <li>Git does not play nice with Unity Scenes and Prefabs</li>
                 </ul>
+                <p>If you've read this far, thanks so much! This project was a massive learning experience for me, and I hope that you were able to learn something too, or at least simply enjoy the read.</p>
               </div>
             </div>
           </div>
