@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Alex Kisil</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+<!-- Favicons -->
+<link href="img/castor.png" rel="icon">
+<link href="img/castor.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!--<h1><a href="#intro" class="scrollto">Alex Kisil</a></h1>-->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="img/logo.png" alt="" title=""></a> -->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html#intro">Home</a></li>
+          <li class="menu-active"><a href="index.html#about">Projects</a>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="research.html">Research</a></li>
+					<li><a href="Alex_Kisil_resume.pdf">Resume</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+
+    <!--==========================
+      Projects Section
+    ============================-->
+
+
+    <section id="about" class="cta-btn-container text-center">
+      <div class="container-fluid">
+        <div class="section-header">
+            <h3 class="section-title-experience">Alex Kisil's Blog</h3>
+          <span class="section-divider"></span>
+        </div>
+      </div>
+
+    </section>
+  <!--==========================
+      Product Advanced Featuress Section
+    ============================-->
+    <section id="advanced-features">
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right wow fadeInRight" src="img/goop_birds.png" alt="">
+              <div class="wow fadeInLeft">
+                <h2>Retroactively balancing enemies in DREAMWILLOW</h2>
+                <h3>Feb 21, 2020</h3>
+                <p>In this post, I explore how we could have taken a more computational approach to balancing our enemies in the recent WolverineSoft Studio release, <a href="dreamwillow.html">DREAMWILLOW</a>.
+                  <br></br>
+                  One of my biggest regrets on DREAMWILLOW was waiting too long to begin balancing the various systems in the game. Level design was pushed off until the last second, and because of it,
+                  we didn't notice some glaring issues. As the lead designer on the enemies pod, I played a large role in the frantic balancing process that followed--which essentially consisted of several consecutive
+                  days of playtesting and tweaking. By this point, we had five different enemies in the game, and not much of a baseline to start off of.
+                  <br></br>
+                  Looking back on it, I think we ended up in an okay place with the progression of difficulty in our game (despite the <a href="blog_companions.html">feedback loop that the AI companions posed</a>).
+                  However, after the game's completion and a month or so to ruminate, I sought out to try and find a better, more systematic approach to balancing enemies in our future games (or at least provide a good 
+                  baseline when starting the process).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-left wow fadeInLeft" src="img/enemy_variables.png" alt="">
+              <img class="advanced-feature-img-left wow fadeInLeft" src="img/balance_formula.png" alt="">
+              <div class="wow fadeInRight">
+                <h2>Constructing a Formula</h2>
+                <p>
+                After some great advice from the wonderful <a href="jordanajlouni.com">Jordan Ajlouni</a>, I tried to break the enemies down into their numerical components, and construct a formula
+                to "score" their difficulty. I was met with surprising difficulty in trying to find good references for character balancing formulas online, but what I <u>did</u> find was an 
+                <a href="https://forums.rpgmakerweb.com/index.php?threads/super-easy-enemy-balance-method.73388/">RPG monster level calculator</a> (along with a list of stats it takes into account) and the 
+                <a href="https://bulbapedia.bulbagarden.net/wiki/Damage">damage calculation formula used in the mainline Pokemon games</a>--good enough for me. 
+                <br></br>
+                The monster level calculator--while not a directly applicable to our twinstick shooter--gave me a sense of what kind of variables I should be taking into account (swapping out stats like elemental attributes for 
+                more applicable ones, like hitbox sizes). From the Pokemon damage formula, I was able to gather a decent format for factoring those variables in: big fraction with additive properties multiplied on top
+                and subtractive ones multiplied on the bottom.
+                <br></br>
+                <img class="advanced-feature-img-right wow fadeInRight" src="img/balance_constant_derivation.png" alt="">
+                <br></br>
+                I've found it's nearly impossible to describe all of the nuance of a real-time enemy encounter through numbers alone, so I added a complexity factor "x" to account for the somewhat subjective complexity 
+                of dealing with certain enemies. For example, the ghoul has a high complexity factor because its firing rate varies over time, making it difficult to predict.
+                <br></br>
+                Once I was happy with the formula, I added in a constant "z" to normalize all of the scores around an intuitive range. To derive the constant, I plugged in all the values for the goop bird enemy 
+                and set its score to 5. This would ensure that (as long as I didn't let any stats grossly outweigh the others) the rest of the enemies would score somewhere around 5 as well. I chose 5 for the goop
+                bird specifically because I felt that it was a good baseline, medium-difficulty enemy.
+                <br></br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <iframe class="advanced-feature-img-right wow fadeInRight" frameborder="0" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS3DNDeYzyALE0vRQ4yQQHcRwvnPpZQb8aLx8WF81nmzxe2fXGgzbQkOaLO7Wza5pUi13TqBK5jwQxR/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="1250" height="365"></iframe>
+              <div class="wow fadeInLeft">
+                <h2>Results and Conclusion</h2>
+                <p>                 
+                  Plugging the values into the formula on a google spreadsheet yielded a decent spread ranging from 0-10, a satisfyingly sweet range for easy comprehension. 
+                  Furthermore, the algorithm's ranking of the enemies turned out to be almost exactly how we ended up ranking them through our trial-and-error balancing method, huzzah!
+                  The only difference is that we tended to treat ghouls as slightly more challenging than goop birds, while the algorithm states they should be absolute pushovers compared 
+                  to the rest of the cast. This tells us that the formula probably places too much emphasis on movement speed (ghouls are stationary enemies) and maybe not enough emphasis
+                  on being a projectile-user enemy. That said, we also often put ghouls in spots around levels that gave them a bit of a tactical advantage--like across bodies of water or on the back ranks
+                  of hordes of other enemies. To account for this, I can continue to up the complexity factor until the ghoul fits where I think it should, but then the formula begins to lose its meaning as
+                  it quickly shifts from being an objective, numerical predictor to a thinly veiled subjective contest with my bias running the show.
+                <br></br>
+                  What I've learned from this is that the formula and spreadsheet method is an extremely quick and simple way of finding a solid <u>baseline</u> for balancing enemies (or any system for that matter) 
+                  in a game. Sure, the rankings it spit out weren't <it>exactly</it> what we landed on in the end--but they were pretty darn close. If we had started our 
+                  balancing process with the rankings the aglorithm gave us, we would have saved a ton of time and effort and been able to tweak things to a much finer grain.
+                <br></br>
+                If you've read this far, thanks so much! I hope you enjoyed it. You can check out DREAMWILLOW <a href="https://wolverinesoft-studio.itch.io/dreamwillow">here</a>; the project is really special to me and I'm super proud of it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #advanced-features -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row wow fadeInUp">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>Alex Kisil</h3>
+              <p>Feel free to contact me at any time! Email is the best way to get in touch with me quickly.</p>
+              <div class="social-links">
+                <a href="https://twitter.com/yellofinch" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/alex.kisil" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/alexkisil/" class="instagram"><i class="fa fa-instagram"></i></a>
+								<a href="https://www.linkedin.com/in/alexander-kisil/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+								<a href="https://gitlab.eecs.umich.edu/akisil" class="github"><i class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="ion-ios-location-outline"></i>
+                <p>Ann Arbor, MI 48105</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-email-outline"></i>
+                <p>alex@alexkisil.com</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-telephone-outline"></i>
+                <p>+1 (586) 321-6151</p>
+              </div>
+
+            </div>
+          </div>
+					<div class="col-lg-5 col-md-8">
+						<img src="img/jimmy.jpg" width="250" height="320" alt="Jimmy" align="left">
+						<p class="description-jimmy" align=left>This is Jimmy. Jimmy loves you.</p>
+					</div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Alex Kisil</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed using <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
